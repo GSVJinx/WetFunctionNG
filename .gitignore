@@ -1,0 +1,7 @@
+build/
+.xmake/
+dist/
+*.pdb
+*.dll
+*.pex
+lib/

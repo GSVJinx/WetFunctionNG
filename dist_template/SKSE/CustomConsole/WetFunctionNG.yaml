@@ -1,0 +1,45 @@
+name: wfng
+help: "WetFunction NG - native Wet Function Redux. Commands act on the crosshair actor, or the player"
+script: WetFunctionNG
+subs:
+  - name: status
+    alias: st
+    func: ConsoleStatus
+    help: "Show wetness, rate, state and flags"
+    args: []
+  - name: start
+    func: ConsoleStart
+    help: "Start the effect (manual effects never stop by themselves)"
+    args: []
+  - name: stop
+    func: ConsoleStop
+    help: "Stop the effect and dry the actor"
+    args: []
+  - name: soak
+    func: ConsoleSoak
+    help: "Start the effect and set wetness to the cap"
+    args: []
+  - name: dry
+    func: ConsoleDry
+    help: "Set wetness to zero"
+    args: []
+  - name: release
+    func: ConsoleRelease
+    help: "Release forced wetness, specular and glossiness values"
+    args: []
+  - name: report
+    func: ConsoleReport
+    help: "Dump status, skin mode and shader values of body, hands, feet, schlong and head"
+    args: []
+  - name: clean
+    func: ConsoleClean
+    help: "Remove leftover WetFunction overrides (old Wet Function Redux, Dewpoint 1.0) from the target and the player"
+    args: []
+  - name: reload
+    func: ConsoleReload
+    help: "Reload the MCM settings files"
+    args: []
+  - name: stopall
+    func: ConsoleStopAll
+    help: "Stop every running effect"
+    args: []
