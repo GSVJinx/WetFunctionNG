@@ -150,5 +150,7 @@ namespace WFNG::Skee
 
 	// Sends the SKEE interface exchange message; call at kPostPostLoad.
 	bool                Connect();
+	// RaceMenu before 0.4.19 (Skyrim 1.5.97): call its NiOverride natives directly; call at kDataLoaded or later
+	bool                ConnectLegacy();
 	IOverrideInterface* Overrides();
 }

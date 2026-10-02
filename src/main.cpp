@@ -39,6 +39,9 @@ namespace
 			Widget::Register();
 			break;
 		case SKSE::MessagingInterface::kDataLoaded:
+			if (!Skee::Overrides()) {
+				Skee::ConnectLegacy();
+			}
 			Settings::Load();
 			Arousal::Init();
 			OStim::Init();
@@ -55,6 +58,9 @@ namespace
 			break;
 		case SKSE::MessagingInterface::kPostLoadGame:
 		case SKSE::MessagingInterface::kNewGame:
+			if (!Skee::Overrides()) {
+				Skee::ConnectLegacy();
+			}
 			Manager::Get().OnGameLoaded();
 			Manager::Get().SetReady(true);
 			if (!Skee::Overrides()) {
